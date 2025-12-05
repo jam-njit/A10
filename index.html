@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Demo</title>
+    <script>
+        function saveCookie() {
+            document.cookie = "pressed=yes; path=/";
+            alert("Button press saved as a cookie!");
+        }
+
+        function checkCookie() {
+            if (document.cookie.includes("pressed=yes")) {
+                document.getElementById("msg").innerHTML = "Button pressed.";
+            } else {
+                document.getElementById("msg").innerHTML = "Button NOT pressed!";
+            }
+        }
+    </script>
+</head>
+
+<body onload="checkCookie()">
+
+    <h1>Cookie Test</h1>
+
+    <p id="msg"></p>
+
+    <button onclick="saveCookie()">Press Me</button>
+    <p>&copy; Jean Andrei Malinao, November 18, 2025</p>
+</body>
+</html>
